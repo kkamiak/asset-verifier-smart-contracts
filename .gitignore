@@ -1,0 +1,7 @@
+bower_components
+.DS_Store
+*.swp
+*.swo
+node_modules
+build
+secrets.json

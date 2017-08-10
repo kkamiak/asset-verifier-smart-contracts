@@ -1,0 +1,30 @@
+{
+  "name": "asset-verifier-smart-contracts",
+  "version": "0.0.1",
+  "description": "Asset verifier smart contracts",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+TODO"
+  },
+  "keywords": [
+    "ethereum"
+  ],
+  "authors": [
+     "Aliaksei Hiatsevich <aliaksei.hiatsevich@instinctools.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "TODO"
+  },
+  "homepage": "https://github.com/TODO#readme",
+  "dependencies": {
+    "truffle-hdwallet-provider": "0.0.3"
+  }
+}
