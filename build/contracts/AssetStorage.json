@@ -1,0 +1,367 @@
+{
+  "contract_name": "AssetStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "owners",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "setOwner",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getAsset",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "bytes32"
+        },
+        {
+          "name": "",
+          "type": "bytes32"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "destroy",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "assets",
+      "outputs": [
+        {
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "name": "checksum",
+          "type": "bytes32"
+        },
+        {
+          "name": "description",
+          "type": "bytes32"
+        },
+        {
+          "name": "createDate",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "deleteAsset",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "getAssetFor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "bytes32"
+        },
+        {
+          "name": "",
+          "type": "bytes32"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_checksum",
+          "type": "bytes32"
+        },
+        {
+          "name": "_description",
+          "type": "bytes32"
+        },
+        {
+          "name": "_createDate",
+          "type": "uint256"
+        }
+      ],
+      "name": "createAsset",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "payable": false,
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_checksum",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "_createDate",
+          "type": "uint256"
+        }
+      ],
+      "name": "AssetCreated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "errorCode",
+          "type": "uint256"
+        }
+      ],
+      "name": "Error",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x60606040525b60008054600160a060020a03191633600160a060020a03161790555b5b610656806100316000396000f300606060405236156100965763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663022914a781146100ae57806313af4035146100df5780635c222bad1461010057806383197ef0146101495780638da5cb5b1461015e5780639fda5b661461018d578063a51888c0146101d9578063aa193ea2146101fe578063fec8d93714610253575b34156100a157600080fd5b6100ac5b600080fd5b565b005b34156100b957600080fd5b6100cd600160a060020a0360043516610281565b60405190815260200160405180910390f35b34156100ea57600080fd5b6100ac600160a060020a0360043516610293565b005b341561010b57600080fd5b6101136102db565b604051600160a060020a039094168452602084019290925260408084019190915260608301919091526080909101905180910390f35b341561015457600080fd5b6100ac6102f9565b005b341561016957600080fd5b610171610323565b604051600160a060020a03909116815260200160405180910390f35b341561019857600080fd5b610113600435610332565b604051600160a060020a039094168452602084019290925260408084019190915260608301919091526080909101905180910390f35b34156101e457600080fd5b6100cd610366565b60405190815260200160405180910390f35b341561020957600080fd5b610113600160a060020a036004351661042d565b604051600160a060020a039094168452602084019290925260408084019190915260608301919091526080909101905180910390f35b341561025e57600080fd5b6100cd6004356024356044356104be565b60405190815260200160405180910390f35b60026020526000908152604090205481565b60005433600160a060020a039081169116146102ae57600080fd5b6000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0383161790555b5b50565b6000806000806102ea3361042d565b93509350935093505b90919293565b60005433600160a060020a0390811691161461031457600080fd5b33600160a060020a0316ff5b5b565b600054600160a060020a031681565b60016020819052600091825260409091208054918101546002820154600390920154600160a060020a039093169290919084565b600160a060020a03331660009081526002602052604081205415156103cd5733600160a060020a03167f9cf38cf2dbf9139f5c32639950507b10775fbbe0421f3e168bc2d1bb1ae3208c6103e960405190815260200160405180910390a2506103e961042a565b600160a060020a0333166000818152600260208181526040808420805485526001808452918520805473ffffffffffffffffffffffffffffffffffffffff1916815591820185905581840185905560039091018490559383525290555b90565b60008080808080600160a060020a038716151561044957600080fd5b600160a060020a038716600090815260026020526040902054915081151561047d57600095508594508493508392506104b5565b50600081815260016020819052604090912080549181015460028201546003830154600160a060020a03909416985090965094509092505b50509193509193565b60008315156104cc57600080fd5b8215156104d857600080fd5b8115156104e457600080fd5b600084815260016020526040902054600160a060020a0316156105495733600160a060020a03167f9cf38cf2dbf9139f5c32639950507b10775fbbe0421f3e168bc2d1bb1ae3208c6103e960405190815260200160405180910390a2506103e9610623565b60806040519081016040908152600160a060020a033316825260208083018790528183018690526060830185905260008781526001909152208151815473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03919091161781556020820151600182015560408201516002820155606082015160039091015550600160a060020a033316600081815260026020526040908190208690558591907f6d73686504b99157ce795c816112d24406bf584ffee8b7b55a91bc198f6478099085905190815260200160405180910390a35060015b93925050505600a165627a7a7230582091d8598dc28e7af6f3256f4ef4c7b88fea744c7d2083445c27e2e06ff438541c0029",
+  "networks": {
+    "4": {
+      "events": {
+        "0x6d73686504b99157ce795c816112d24406bf584ffee8b7b55a91bc198f647809": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "_checksum",
+              "type": "bytes32"
+            },
+            {
+              "indexed": false,
+              "name": "_createDate",
+              "type": "uint256"
+            }
+          ],
+          "name": "AssetCreated",
+          "type": "event"
+        },
+        "0x9cf38cf2dbf9139f5c32639950507b10775fbbe0421f3e168bc2d1bb1ae3208c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "sender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "errorCode",
+              "type": "uint256"
+            }
+          ],
+          "name": "Error",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x6666d8e47d64601c68d16c09b8c8871285022ffd",
+      "updated_at": 1502698469840
+    },
+    "42": {
+      "events": {
+        "0x6d73686504b99157ce795c816112d24406bf584ffee8b7b55a91bc198f647809": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "_checksum",
+              "type": "bytes32"
+            },
+            {
+              "indexed": false,
+              "name": "_createDate",
+              "type": "uint256"
+            }
+          ],
+          "name": "AssetCreated",
+          "type": "event"
+        },
+        "0x9cf38cf2dbf9139f5c32639950507b10775fbbe0421f3e168bc2d1bb1ae3208c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "sender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "errorCode",
+              "type": "uint256"
+            }
+          ],
+          "name": "Error",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x6666d8e47d64601c68d16c09b8c8871285022ffd",
+      "updated_at": 1502445060928
+    },
+    "1502444251389": {
+      "events": {
+        "0x6d73686504b99157ce795c816112d24406bf584ffee8b7b55a91bc198f647809": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "_checksum",
+              "type": "bytes32"
+            },
+            {
+              "indexed": false,
+              "name": "_createDate",
+              "type": "uint256"
+            }
+          ],
+          "name": "AssetCreated",
+          "type": "event"
+        },
+        "0x9cf38cf2dbf9139f5c32639950507b10775fbbe0421f3e168bc2d1bb1ae3208c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "sender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "errorCode",
+              "type": "uint256"
+            }
+          ],
+          "name": "Error",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x7139dc4c00e081f798c56101a4e497b47cbb0ac1",
+      "updated_at": 1502444970670
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1502698469840
+}
